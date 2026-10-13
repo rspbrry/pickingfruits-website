@@ -1,0 +1,9 @@
+# Nur Website, Werkzeuge und Ablauf kommen ins Git-Projekt.
+# Alles andere (Originaldateien, Entwürfe, Upload-Pakete, Notizen) bleibt lokal.
+/*
+!/.gitignore
+!/.github/
+!/site/
+!/tools/
+!/DEPLOY.md
+.DS_Store

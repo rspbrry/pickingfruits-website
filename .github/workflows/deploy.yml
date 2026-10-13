@@ -1,0 +1,86 @@
+name: Website zu IONOS hochladen
+
+# Läuft automatisch, sobald sich etwas im Ordner "site" ändert (Push auf main),
+# oder von Hand über den Reiter "Actions" > "Run workflow".
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+# Nie zwei Uploads gleichzeitig
+concurrency:
+  group: deploy-ionos
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Code holen
+        uses: actions/checkout@v4
+
+      - name: Prüfen, ob alle Zugangsdaten hinterlegt sind
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
+        run: |
+          for v in SFTP_HOST SFTP_USER SFTP_PASSWORD SFTP_KNOWN_HOSTS; do
+            if [ -z "${!v}" ]; then
+              echo "::error::Das Geheimnis $v fehlt (GitHub: Settings > Secrets and variables > Actions)."
+              exit 1
+            fi
+          done
+
+      - name: Upload-Programm installieren
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Server-Schlüssel hinterlegen (Schutz vor falschem Server)
+        env:
+          SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SFTP_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Verbindung prüfen (zeigt nur den Startpfad und Ordnernamen)
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: |
+          lftp -u "$SFTP_USER","$SFTP_PASSWORD" \
+            -e "set sftp:auto-confirm no; \
+                set sftp:connect-program 'ssh -a -x -o StrictHostKeyChecking=yes'; \
+                set net:max-retries 2; set net:timeout 20; \
+                pwd; cls -1; bye" \
+            "sftp://$SFTP_HOST"
+
+      - name: Dateien hochladen
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          # Zielordner im Webspace. Standard: "neu". Später änderbar unter
+          # Settings > Secrets and variables > Actions > Variables (SFTP_TARGET_DIR).
+          TARGET: ${{ vars.SFTP_TARGET_DIR || 'neu' }}
+        run: |
+          # Es wird nichts gelöscht, nur hochgeladen bzw. aktualisiert.
+          lftp -u "$SFTP_USER","$SFTP_PASSWORD" \
+            -e "set sftp:auto-confirm no; \
+                set sftp:connect-program 'ssh -a -x -o StrictHostKeyChecking=yes'; \
+                set net:max-retries 3; set net:timeout 30; \
+                mkdir -p \"$TARGET\"; \
+                mirror --reverse --verbose --parallel=3 --exclude-glob .DS_Store site/ \"$TARGET\"; \
+                bye" \
+            "sftp://$SFTP_HOST"
+          echo "Fertig: site/ wurde nach '$TARGET' übertragen."

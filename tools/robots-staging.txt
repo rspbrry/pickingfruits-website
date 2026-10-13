@@ -1,0 +1,5 @@
+# NUR für die Test-Subdomain (z. B. test.pickingfruits.de).
+# Diese Datei beim Test-Upload als "robots.txt" hochladen, damit der Testaufbau
+# nicht bei Google landet. Für die echte Seite NICHT verwenden.
+User-agent: *
+Disallow: /
