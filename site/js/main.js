@@ -31,20 +31,7 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // --- Rückmeldung nach Redirect ohne JavaScript (?sent=1 / ?error=1) ---
-  var bottomMsg = document.getElementById('form-msg');
-  if (bottomMsg) {
-    var params = new URLSearchParams(window.location.search);
-    if (params.has('sent')) {
-      bottomMsg.textContent = OK_TEXT;
-      bottomMsg.className = 'form-msg show ok';
-    } else if (params.has('error')) {
-      bottomMsg.textContent = FEHLER_TEXT;
-      bottomMsg.className = 'form-msg show err';
-    }
-  }
-
-  // --- Kontaktformulare (Hero und Kontaktbereich) ---
+  // --- Kontaktformulare (Hero und Kontaktbereich), Versand über Formspree ---
   document.querySelectorAll('form.contact-form').forEach(function (form) {
     var msg = form.querySelector('.form-msg');
     if (!msg) { return; }
@@ -60,6 +47,21 @@
         msg.className = 'form-msg show ' + type;
       }
 
+      // Honeypot ausgefüllt: Bot. Still "Danke" zeigen, nichts senden.
+      var trap = form.querySelector('input[name="_gotcha"]');
+      if (trap && trap.value) {
+        show('ok', OK_TEXT);
+        form.reset();
+        return;
+      }
+
+      // Betreff der Mail aus dem gewählten Thema bilden
+      var topic = form.querySelector('select[name="topic"]');
+      var subject = form.querySelector('input[name="subject"]');
+      if (topic && subject && topic.selectedIndex > 0) {
+        subject.value = 'Neue Anfrage: ' + topic.options[topic.selectedIndex].text;
+      }
+
       if (button) {
         button.disabled = true;
         button.textContent = 'Wird gesendet …';
@@ -68,7 +70,7 @@
       fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
-        headers: { 'X-Requested-With': 'XMLHttpRequest' }
+        headers: { 'Accept': 'application/json' }
       })
         .then(function (res) {
           return res.json().catch(function () {
@@ -80,7 +82,7 @@
             show('ok', OK_TEXT);
             form.reset();
           } else {
-            show('err', (data && data.error) || FEHLER_TEXT);
+            show('err', FEHLER_TEXT);
           }
         })
         .catch(function () {

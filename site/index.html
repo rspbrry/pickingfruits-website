@@ -431,7 +431,9 @@
           <span>Antwort innerhalb von 24 Stunden</span>
         </div>
       </div>
-      <form class="contact-form" action="contact.php" method="post">
+      <form class="contact-form" action="https://formspree.io/f/FORMSPREE_ID" method="post">
+        <!-- Betreff der Mail, wird per JavaScript aus dem gewählten Thema gefüllt -->
+        <input type="hidden" name="subject" value="Neue Anfrage über pickingfruits.de">
         <div class="field">
           <label for="h-name">Dein Name</label>
           <input type="text" id="h-name" name="name" required autocomplete="name">
@@ -444,11 +446,11 @@
           <label for="h-topic">Worum geht's?</label>
           <select id="h-topic" name="topic" required>
             <option value="" disabled selected>Bitte wählen</option>
-            <option value="audit">Meine Anzeigen laufen, aber es ist mehr drin</option>
-            <option value="start">Ich will mit Google oder Meta Ads starten</option>
-            <option value="strategie">Ich suche einen Partner für mein Wachstum</option>
-            <option value="wechsel">Ich möchte meine Betreuung wechseln</option>
-            <option value="sonstiges">Etwas anderes</option>
+            <option value="Meine Anzeigen laufen, aber es ist mehr drin">Meine Anzeigen laufen, aber es ist mehr drin</option>
+            <option value="Ich will mit Google oder Meta Ads starten">Ich will mit Google oder Meta Ads starten</option>
+            <option value="Ich suche einen Partner für mein Wachstum">Ich suche einen Partner für mein Wachstum</option>
+            <option value="Ich möchte meine Betreuung wechseln">Ich möchte meine Betreuung wechseln</option>
+            <option value="Etwas anderes">Etwas anderes</option>
           </select>
         </div>
         <div class="field">
@@ -458,7 +460,7 @@
         <!-- Honeypot: für Menschen unsichtbar, fängt Bots ab -->
         <div class="hp" aria-hidden="true">
           <label for="h-company">Firma (bitte leer lassen)</label>
-          <input type="text" id="h-company" name="company" tabindex="-1" autocomplete="off">
+          <input type="text" id="h-company" name="_gotcha" tabindex="-1" autocomplete="off">
         </div>
         <button class="btn shine" type="submit">Kostenloses Gespräch anfragen</button>
         <div class="form-msg" role="status" aria-live="polite"></div>
@@ -800,7 +802,9 @@
       <!-- Optional: Buchungslink (z. B. Cal.com) hier ergänzen, sobald vorhanden -->
       <div class="price-note">Individuelles Angebot · kein Standardpreis · 24h Reaktionszeit</div>
     </div>
-    <form class="contact-form" action="contact.php" method="post" data-reveal style="--d:.15s">
+    <form class="contact-form" action="https://formspree.io/f/FORMSPREE_ID" method="post" data-reveal style="--d:.15s">
+      <!-- Betreff der Mail, wird per JavaScript aus dem gewählten Thema gefüllt -->
+      <input type="hidden" name="subject" value="Neue Anfrage über pickingfruits.de">
       <div class="field">
         <label for="k-name">Dein Name</label>
         <input type="text" id="k-name" name="name" required autocomplete="name">
@@ -813,11 +817,11 @@
         <label for="k-topic">Worum geht's?</label>
         <select id="k-topic" name="topic" required>
           <option value="" disabled selected>Bitte wählen</option>
-          <option value="audit">Meine Anzeigen laufen, aber es ist mehr drin</option>
-          <option value="start">Ich will mit Google oder Meta Ads starten</option>
-          <option value="strategie">Ich suche einen Partner für mein Wachstum</option>
-          <option value="wechsel">Ich möchte meine Betreuung wechseln</option>
-          <option value="sonstiges">Etwas anderes</option>
+          <option value="Meine Anzeigen laufen, aber es ist mehr drin">Meine Anzeigen laufen, aber es ist mehr drin</option>
+          <option value="Ich will mit Google oder Meta Ads starten">Ich will mit Google oder Meta Ads starten</option>
+          <option value="Ich suche einen Partner für mein Wachstum">Ich suche einen Partner für mein Wachstum</option>
+          <option value="Ich möchte meine Betreuung wechseln">Ich möchte meine Betreuung wechseln</option>
+          <option value="Etwas anderes">Etwas anderes</option>
         </select>
       </div>
       <div class="field">
@@ -831,7 +835,7 @@
       <!-- Honeypot: für Menschen unsichtbar, fängt Bots ab -->
       <div class="hp" aria-hidden="true">
         <label for="k-company">Firma (bitte leer lassen)</label>
-        <input type="text" id="k-company" name="company" tabindex="-1" autocomplete="off">
+        <input type="text" id="k-company" name="_gotcha" tabindex="-1" autocomplete="off">
       </div>
       <button class="btn shine" type="submit">Anfrage senden</button>
       <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
@@ -895,6 +899,6 @@
   <a class="btn ghost" href="https://wa.me/4915560915607?text=Hallo%20Daniel%2C%20ich%20m%C3%B6chte%20gern%20ein%20Gespr%C3%A4ch%20vereinbaren." target="_blank" rel="noopener">WhatsApp</a>
 </div>
 
-<script src="js/main.js?v=7"></script>
+<script src="js/main.js?v=8"></script>
 </body>
 </html>
