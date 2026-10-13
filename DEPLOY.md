@@ -60,7 +60,7 @@ Reiter "Actions" > "Website veröffentlichen (GitHub Pages)" > "Run workflow". N
 
 **7. Aufräumen bei IONOS und GitHub**
 - GitHub: Settings > Secrets and variables > Actions: die vier `SFTP_*`-Geheimnisse löschen (werden nicht mehr gebraucht).
-- IONOS: den SFTP-Zugang `a232995` löschen. Das WordPress-Projekt kann liegen bleiben; der Tarif lässt sich später über den IONOS-Support auf Domain + E-Mail verkleinern.
+- IONOS: den für den alten Upload angelegten SFTP+SSH-Zugang löschen. Das WordPress-Projekt kann liegen bleiben; der Tarif lässt sich später über den IONOS-Support auf Domain + E-Mail verkleinern.
 
 ## Pflege
 
