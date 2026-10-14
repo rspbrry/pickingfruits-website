@@ -299,7 +299,7 @@ details.more > summary:hover{color:var(--erdbeer);}
 .promise{background:var(--tanne);color:var(--sage);border-radius:24px;padding:54px 50px;}
 .promise .wrap-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;}
 .promise h2{color:#fff;font-size:32px;max-width:340px;}
-.promise-list{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.promise-list{display:grid;grid-template-columns:1fr;gap:18px;}
 .promise-item{font-size:14.5px;display:flex;gap:12px;align-items:flex-start;}
 .promise-item .dot{width:8px;height:8px;border-radius:50%;background:var(--erdbeer);margin-top:6px;flex-shrink:0;}
 .promise-item b{display:block;color:#fff;font-weight:600;margin-bottom:3px;font-size:15px;}
