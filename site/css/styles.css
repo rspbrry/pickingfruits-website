@@ -563,3 +563,19 @@ header{animation:header-in .9s var(--ease-glide) both;}
   .service-card h3{font-size:20px;}
 }
 @media (prefers-reduced-motion: reduce){.service-card:hover > img{transform:none;}}
+
+/* --- BEWERTUNGEN: Sterne-Zeile und Kundenstimmen --- */
+.rating{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--tanne-soft);text-decoration:none;}
+.rating b{color:var(--tanne);font-weight:600;}
+.rating:hover span:last-child{text-decoration:underline;}
+.contact-form .rating{display:flex;justify-content:center;margin-top:14px;}
+.rating-head{margin-bottom:6px;}
+.stars{color:var(--birne);letter-spacing:2px;font-size:15px;line-height:1;}
+.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.quote-card{background:var(--cream-card);border:1px solid var(--line);border-radius:18px;padding:30px 28px;margin:0;display:flex;flex-direction:column;gap:14px;}
+.quote-card blockquote{margin:0;flex:1;}
+.quote-card blockquote p{font-family:'Newsreader',serif;font-size:19px;line-height:1.45;color:var(--tanne);font-style:italic;margin:0;}
+.quote-card figcaption{display:flex;flex-direction:column;gap:2px;font-size:13px;color:var(--tanne-soft);}
+.quote-card figcaption b{color:var(--tanne);font-weight:600;font-size:14px;}
+.quote-src{margin:22px 0 0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--tanne-soft);}
+@media (max-width:880px){.quote-grid{grid-template-columns:1fr;}.quote-card blockquote p{font-size:18px;}}

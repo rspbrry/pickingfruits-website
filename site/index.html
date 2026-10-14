@@ -36,7 +36,7 @@
 <!-- Schriften liegen lokal (kein Abruf bei Google); die wichtigsten vorladen -->
 <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/styles.css?v=11">
+<link rel="stylesheet" href="css/styles.css?v=12">
 
 <!-- Strukturierte Daten: wird von tools/build_schema.py erzeugt -->
 <script type="application/ld+json" id="schema-jsonld">
@@ -463,6 +463,10 @@
           <input type="text" id="h-company" name="_gotcha" tabindex="-1" autocomplete="off">
         </div>
         <button class="btn shine" type="submit">Kostenloses Gespräch anfragen</button>
+        <a class="rating" href="https://share.google/TvaYb0mXvrVm1EBJi" target="_blank" rel="noopener">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span><b>5,0</b> aus 10 Google-Bewertungen</span>
+        </a>
         <div class="form-msg" role="status" aria-live="polite"></div>
         <p class="form-note">Ich sehe mir deinen Shop an, bevor wir sprechen. Deine Angaben nutze ich nur, um dir zu antworten (<a href="datenschutz.html">Datenschutz</a>). Lieber direkt? <a href="https://wa.me/4915560915607?text=Hallo%20Daniel%2C%20ich%20m%C3%B6chte%20gern%20ein%20Gespr%C3%A4ch%20vereinbaren." target="_blank" rel="noopener">Schreib mir auf WhatsApp</a>.</p>
       </form>
@@ -715,20 +719,36 @@
   </div>
 </section>
 
-<!--
-  8. KUNDENSTIMMEN (aktuell ausgeblendet, bis echte Zitate vorliegen)
-  Sobald Zitate da sind, diesen Kommentar entfernen und den Block ausfüllen:
-
-<section class="divider">
+<!-- 8. KUNDENSTIMMEN (Zitate aus den Google-Bewertungen) -->
+<section id="stimmen" class="divider">
   <div class="wrap">
-    <blockquote class="testimonial">
-      <span class="quote-mark">&#8220;</span>
-      <p>ZITAT HIER</p>
-      <cite>Name, Rolle, Unternehmen</cite>
-    </blockquote>
+    <div class="section-head">
+      <h2 data-split>Was Kunden sagen.</h2>
+      <a class="rating rating-head" href="https://share.google/TvaYb0mXvrVm1EBJi" target="_blank" rel="noopener" data-reveal style="--d:.15s">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><b>5,0</b> aus 10 Google-Bewertungen</span>
+      </a>
+    </div>
+    <div class="quote-grid" data-stagger>
+      <figure class="quote-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote><p>Daniel hat für unser Hotel die Google Ads Kampagne professionell eingerichtet und von Anfang an optimal betreut. Schon nach kurzer Zeit konnten wir sehr gute Ergebnisse erzielen: mehr Sichtbarkeit, mehr Anfragen und eine deutlich bessere Auslastung. Wir können PickingFruits uneingeschränkt weiterempfehlen!</p></blockquote>
+        <figcaption><b>Mark Jungbluth</b><span>Hotelbesitzer, Harz</span></figcaption>
+      </figure>
+      <figure class="quote-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote><p>Wir sind ein Parkettlegerbetrieb, für den Daniel von PickingFruits die Google Ads Optimierung macht. Die Anzahl der Anfragen hat sich in den vergangenen Monaten dank seiner Arbeit kontinuierlich erhöht.</p></blockquote>
+        <figcaption><b>Michael Glienke</b><span>Holz die Schleifer, Hamburg</span></figcaption>
+      </figure>
+      <figure class="quote-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote><p>Sehr gute Beratung, kompetent und immer ein offenes Ohr. Ich kann Daniel nur wärmstens empfehlen.</p></blockquote>
+        <figcaption><b>Marina Seel</b><span>BeautySkin Center, Rotthalmünster</span></figcaption>
+      </figure>
+    </div>
+    <p class="quote-src" data-reveal>Alle Zitate stammen aus öffentlichen Google-Bewertungen.</p>
   </div>
 </section>
--->
 
 <!-- 9. FAQ -->
 <section id="faq" class="divider">
