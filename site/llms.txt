@@ -17,6 +17,7 @@
 
 - [Startseite](https://pickingfruits.de/): Überblick, Anfrage-Formular und Kurzvorstellung
 - [Cases](https://pickingfruits.de/#cases): Ergebnisse aus der Praxis
+- [Kundenstimmen](https://pickingfruits.de/#stimmen): Zitate aus den Google-Bewertungen (5,0 Sterne)
 - [Warum ich](https://pickingfruits.de/#warum): Was PickingFruits von klassischen Agenturen und Freelancern unterscheidet
 - [Leistungen](https://pickingfruits.de/#leistungen): Was konkret übernommen wird
 - [Ablauf](https://pickingfruits.de/#ablauf): Von der Anfrage zum Wachstum in drei Schritten
