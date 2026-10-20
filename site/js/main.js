@@ -208,12 +208,26 @@
     // Steuerleiste erst nach dem Start zeigen (ohne JavaScript bleibt sie sichtbar)
     videoEl.removeAttribute('controls');
 
-    playBtn.addEventListener('click', function () {
+    var videoBox = document.getElementById('hero-video');
+    if (videoBox) { videoBox.classList.add('is-idle'); }
+
+    function startVideo() {
       videoEl.setAttribute('controls', '');
       videoEl.play().catch(function () { /* Browser blockiert: Nutzer startet über die Steuerung */ });
+    }
+    playBtn.addEventListener('click', startVideo);
+    // Auch ein Klick auf das Vorschaubild startet das Video (solange die Steuerung noch aus ist)
+    videoEl.addEventListener('click', function () {
+      if (!playBtn.hidden) { startVideo(); }
     });
-    videoEl.addEventListener('play', function () { playBtn.hidden = true; });
-    videoEl.addEventListener('ended', function () { playBtn.hidden = false; });
+    videoEl.addEventListener('play', function () {
+      playBtn.hidden = true;
+      if (videoBox) { videoBox.classList.remove('is-idle'); }
+    });
+    videoEl.addEventListener('ended', function () {
+      playBtn.hidden = false;
+      if (videoBox) { videoBox.classList.add('is-idle'); }
+    });
   }
 
   // --- Mobiler Schnellzugriff: erst zeigen, wenn der Hero aus dem Bild ist,
