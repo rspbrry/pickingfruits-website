@@ -630,3 +630,4 @@ header{animation:header-in .9s var(--ease-glide) both;}
 }
 .fit-soft a{color:var(--erdbeer-deep);font-weight:600;text-decoration:none;border-bottom:1.5px solid transparent;}
 .fit-soft a:hover{border-color:var(--erdbeer);}
+.case-card + .case-card{margin-top:22px;}
