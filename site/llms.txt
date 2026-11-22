@@ -1,14 +1,14 @@
 # PickingFruits
 
-> PickingFruits ist die persönliche Marketing-Beratung von Daniel Wolff (Dresden) für Online-Shops und Marken, die mit Google Ads und Meta Ads wachsen wollen. Die Alternative zur klassischen Marketing-Agentur: ein fester Ansprechpartner, der strategisch mitdenkt und die Umsetzung selbst übernimmt.
+> PickingFruits ist der Wachstumspartner von Daniel Wolff (Dresden) für Online-Shops und Marken: Strategie und Umsetzung im Performance Marketing aus einer Hand, Google Ads, Meta Ads oder beides, wie ein Inhouse-Marketer, nur als Freelancer. Die persönliche Alternative zur klassischen Marketing-Agentur, mit 60-Tage-Versprechen.
 
 ## Kurzfakten
 
 - Anbieter: Daniel Wolff, PickingFruits (Einzelunternehmen), Hauptstraße 3a, 01097 Dresden
 - Leistungen: Google Ads Betreuung, Meta Ads (Facebook und Instagram) als Media Buyer, TikTok Ads Beratung, Audit, Strategie und Wachstumsplan, Beratung zu Tracking und Attribution
-- Zielgruppe: Online-Shops und Marken mit Wachstumsanspruch, größere lokale Dienstleister sind ebenfalls willkommen
+- Zielgruppe: Online-Shops und Marken mit einem Produkt, das sich bereits verkauft, Werbebudget ab etwa 2.000 Euro im Monat oder dem klaren Willen, dahin zu wachsen; Wechsler von Agenturen und motivierte Gründer; größere lokale Dienstleister sind ebenfalls willkommen
 - Arbeitsweise: wie ein Inhouse-Marketer auf Zeit, aber flexibel; ein fester Ansprechpartner statt Account-Manager-Kette; keine Mindestlaufzeit; individuelles Angebot statt Standardpaketen; Antwort innerhalb von 24 Stunden
-- Preise: Betreuung bei kleinen Budgets ab etwa 300 bis 400 Euro im Monat (auf Wunsch teilweise erfolgsabhängig), bei größeren Konten mit fünfstelligen Werbebudgets mehrere Tausend Euro im Monat; unter etwa 500 Euro Werbebudget im Monat rechnet sich eine Betreuung meist noch nicht; individuelles Angebot nach dem Gespräch
+- Preise: Honorar nach Werbebudget gestaffelt: ab 500 Euro im Monat bei 2.000 bis 5.000 Euro Werbebudget, ab 1.000 Euro bei 5.000 bis 15.000 Euro, darüber individuell (meist Fixum plus Beteiligung). Gilt nur bei Wachstum: 60-Tage-Versprechen (keine Honorarzahlung für die ersten zwei Monate, wenn sich die vereinbarte Kennzahl nicht messbar verbessert), variable Vergütung mit Beteiligung möglich, keine Mindestlaufzeit. Einstiegsmodell für motivierte Gründer unter 2.000 Euro Budget mit kleinem Fixum plus Beteiligung. Konto-Check vorab kostenlos. Details: https://pickingfruits.de/kosten/
 - Qualifikation: Google Partner (zertifiziert für Google Ads); hauptberuflich Google Ads Specialist in einer deutschen Performance-Marketing-Agentur mit fünfstelligen Tagesbudgets
 - Einsatzgebiet: Deutschland, überwiegend remote
 - Sprache: Deutsch
@@ -23,7 +23,11 @@
 - [Ablauf](https://pickingfruits.de/#ablauf): Von der Anfrage zum Wachstum in drei Schritten
 - [Über Daniel Wolff](https://pickingfruits.de/#ueber-mich): Werdegang und Haltung
 - [Häufige Fragen](https://pickingfruits.de/#faq): Antworten zu Leistungen, Budget, Ablauf und Zusammenarbeit
+- [Preise](https://pickingfruits.de/#preise): Honorar nach Werbebudget
 - [Kontakt](https://pickingfruits.de/#kontakt): Formular oder WhatsApp
+- [Was kostet Google Ads und Meta Ads Betreuung?](https://pickingfruits.de/kosten/): Honorare, variable Modelle, Vergleich Agentur, Freelancer, Inhouse
+- [Das 60-Tage-Versprechen](https://pickingfruits.de/60-tage-versprechen/): Deine Ads werden besser, oder du zahlst kein Honorar; Bedingungen und Ablauf
+- [Antworten](https://pickingfruits.de/antworten/): Übersicht aller Antwortseiten
 
 ## Ergebnisbeispiele
 

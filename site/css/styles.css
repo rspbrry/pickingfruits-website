@@ -635,3 +635,56 @@ header{animation:header-in .9s var(--ease-glide) both;}
 .case-title:hover{color:var(--erdbeer-deep);background-size:100% 2px;}
 .case-title::after{content:'\2197';font-family:'IBM Plex Mono',monospace;font-size:.5em;vertical-align:super;margin-left:.3em;color:var(--tanne-soft);opacity:.7;transition:color .2s ease,opacity .2s ease;}
 .case-title:hover::after{color:var(--erdbeer-deep);opacity:1;}
+
+
+/* ==========================================================
+   PREISE, VERSPRECHEN-ABSCHNITT, ANTWORTSEITEN
+   ========================================================== */
+.price-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:start;}
+.price-table-wrap{background:var(--cream-card);border:1px solid var(--line);border-radius:20px;padding:30px 30px 24px;}
+.price-lead{font-family:'Newsreader',serif;font-size:21px;line-height:1.4;color:var(--tanne);margin:0 0 20px;}
+.price-table{width:100%;border-collapse:collapse;font-size:15.5px;}
+.price-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tanne-soft);font-weight:500;padding:0 0 10px;border-bottom:1px solid var(--line);}
+.price-table td{padding:14px 0;border-bottom:1px solid var(--line);color:var(--tanne);vertical-align:top;}
+.price-table td:last-child{text-align:right;}
+.price-table td b{font-family:'Newsreader',serif;font-size:22px;font-weight:600;color:var(--erdbeer-deep);}
+.price-fine{font-size:13px;line-height:1.55;color:var(--tanne-soft);margin:16px 0 0;}
+.price-rules{display:flex;flex-direction:column;gap:12px;}
+.price-rule{background:var(--cream-card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:4px;}
+.price-rule b{font-size:15.5px;color:var(--tanne);}
+.price-rule span{font-size:14.5px;line-height:1.55;color:var(--tanne-soft);}
+.price-rule span a{color:var(--erdbeer-deep);font-weight:600;text-decoration:none;}
+.price-rule.founder{background:var(--tanne);border-color:var(--tanne);}
+.price-rule.founder b{color:var(--birne);}
+.price-rule.founder span{color:rgba(241,244,236,0.86);}
+.price-note a{color:var(--erdbeer-deep);text-decoration:none;font-weight:600;}
+.section-head p a{color:var(--erdbeer-deep);font-weight:600;text-decoration:none;}
+.promise.guarantee .wrap-inner{grid-template-columns:1fr 1.3fr;}
+.promise.guarantee h2{font-size:34px;line-height:1.15;}
+.eyebrow.light{color:var(--birne);}
+.eyebrow.light::before{background:var(--birne);}
+.btn.ghost.light{color:#fff;border-color:rgba(255,255,255,0.35);}
+.btn.ghost.light:hover{border-color:#fff;}
+.promise .cta-row{margin-top:22px;}
+.foot-links{font-size:14px;color:var(--tanne-soft);margin:0 0 14px;}
+.foot-links a{color:var(--tanne-soft);text-decoration:none;}
+.foot-links a:hover{color:var(--erdbeer);}
+.answer-hero .lead{max-width:560px;}
+.answer-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.answer-list li{background:var(--cream-card);border:1px solid var(--line);border-radius:18px;padding:24px 26px;}
+.answer-list li a{font-family:'Newsreader',serif;font-size:23px;color:var(--tanne);text-decoration:none;}
+.answer-list li a:hover{color:var(--erdbeer-deep);}
+.answer-list li p{margin:8px 0 0;font-size:14.5px;color:var(--tanne-soft);}
+.answer-list li.soon{opacity:.6;}
+.compare{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--cream-card);border:1px solid var(--line);border-radius:18px;overflow:hidden;}
+.compare th,.compare td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;color:var(--tanne-soft);}
+.compare th{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--tanne);font-weight:500;background:var(--sage-deep);}
+.compare td:first-child{color:var(--tanne);font-weight:600;}
+.compare-wrap{overflow-x:auto;}
+@media (max-width:880px){
+  .price-grid{grid-template-columns:1fr;}
+  .promise.guarantee .wrap-inner{grid-template-columns:1fr;}
+  .promise.guarantee h2{font-size:28px;}
+  .answer-list{grid-template-columns:1fr;}
+  .price-table td b{font-size:19px;}
+}

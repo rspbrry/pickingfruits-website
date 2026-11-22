@@ -28,9 +28,9 @@ EMAIL = "daniel@pickingfruits.de"
 PHONE = "+49 155 60915607"
 SLOGAN = "Marken wachsen lassen, nicht nur Kampagnen schalten."
 DESCRIPTION = (
-    "PickingFruits ist die persönliche Marketing-Beratung von Daniel Wolff für "
-    "Online-Shops und Marken: Google Ads, Meta Ads, Audit, Strategie und Wachstumsplan. "
-    "Die Alternative zur klassischen Marketing-Agentur, mit einem festen Ansprechpartner."
+    "PickingFruits ist der Wachstumspartner von Daniel Wolff für Online-Shops und Marken: "
+    "Google Ads und Meta Ads als Freelancer, Strategie und Umsetzung aus einer Hand, wie ein "
+    "Inhouse-Marketer. Honorar ab 500 Euro im Monat, 60-Tage-Versprechen, keine Mindestlaufzeit."
 )
 ADDRESS = {
     "@type": "PostalAddress",
@@ -131,7 +131,7 @@ def build(faq):
         },
         {
             "@type": "Person", "@id": person_id, "name": OWNER,
-            "jobTitle": "Berater für Google Ads, Meta Ads und Marken-Wachstum",
+            "jobTitle": "Google Ads und Meta Ads Freelancer, Wachstumspartner für Online-Shops",
             "description": (
                 "Google Ads Specialist in einer deutschen Performance-Marketing-Agentur und "
                 "freiberuflicher strategischer Berater für Online-Shops und Marken. Gründer von PickingFruits."
