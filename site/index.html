@@ -11,6 +11,7 @@
 <link rel="canonical" href="https://pickingfruits.de/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="google-site-verification" content="50-e37nWlLgCH_lvxdsHavyhbMwGC91DpIgAtBg0jPs">
+<meta name="msvalidate.01" content="FEFA0F9098A592D0A2C5BE6CB1AD2C53">
 
 <!-- Open Graph / Social -->
 <meta property="og:type" content="website">
@@ -37,7 +38,10 @@
 <!-- Schriften liegen lokal (kein Abruf bei Google); die wichtigsten vorladen -->
 <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/styles.css?v=20">
+<link rel="stylesheet" href="css/styles.css?v=21">
+<!-- Plausible: cookielose Statistik, EU-Server, keine personenbezogenen Daten -->
+<script defer data-domain="pickingfruits.de" src="https://plausible.io/js/script.outbound-links.js"></script>
+
 
 <!-- Strukturierte Daten: wird von tools/build_schema.py erzeugt -->
 <script type="application/ld+json" id="schema-jsonld">
@@ -442,6 +446,19 @@
         <div class="field">
           <label for="h-website">Shop oder Website <span class="opt">(optional)</span></label>
           <input type="text" id="h-website" name="website" placeholder="deinshop.de" autocomplete="url">
+        </div>
+        <div class="field">
+          <label for="h-herkunft">Wie hast du von mir erfahren? <span class="opt">(optional)</span></label>
+          <select id="h-herkunft" name="herkunft">
+            <option value="" selected>Bitte wählen</option>
+            <option value="Empfehlung">Empfehlung</option>
+            <option value="Google-Suche">Google-Suche</option>
+            <option value="KI-Assistent (ChatGPT, Perplexity, Gemini …)">KI-Assistent (ChatGPT, Perplexity, Gemini …)</option>
+            <option value="Instagram oder LinkedIn">Instagram oder LinkedIn</option>
+            <option value="Kleinanzeigen">Kleinanzeigen</option>
+            <option value="Werbeanzeige">Werbeanzeige</option>
+            <option value="Sonstiges">Sonstiges</option>
+          </select>
         </div>
         <!-- Honeypot: für Menschen unsichtbar, fängt Bots ab -->
         <div class="hp" aria-hidden="true">
@@ -884,7 +901,20 @@
         <label for="k-message">Nachricht <span class="opt">(optional)</span></label>
         <textarea id="k-message" name="message" placeholder="Was soll sich bei dir verändern?"></textarea>
       </div>
-      <!-- Honeypot: für Menschen unsichtbar, fängt Bots ab -->
+      <div class="field">
+          <label for="k-herkunft">Wie hast du von mir erfahren? <span class="opt">(optional)</span></label>
+          <select id="k-herkunft" name="herkunft">
+            <option value="" selected>Bitte wählen</option>
+            <option value="Empfehlung">Empfehlung</option>
+            <option value="Google-Suche">Google-Suche</option>
+            <option value="KI-Assistent (ChatGPT, Perplexity, Gemini …)">KI-Assistent (ChatGPT, Perplexity, Gemini …)</option>
+            <option value="Instagram oder LinkedIn">Instagram oder LinkedIn</option>
+            <option value="Kleinanzeigen">Kleinanzeigen</option>
+            <option value="Werbeanzeige">Werbeanzeige</option>
+            <option value="Sonstiges">Sonstiges</option>
+          </select>
+        </div>
+        <!-- Honeypot: für Menschen unsichtbar, fängt Bots ab -->
       <div class="hp" aria-hidden="true">
         <label for="k-company">Firma (bitte leer lassen)</label>
         <input type="text" id="k-company" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -951,6 +981,6 @@
   <a class="btn ghost" href="https://wa.me/4915560915607?text=Hallo%20Daniel%2C%20ich%20m%C3%B6chte%20gern%20ein%20Gespr%C3%A4ch%20vereinbaren." target="_blank" rel="noopener">WhatsApp</a>
 </div>
 
-<script src="js/main.js?v=9"></script>
+<script src="js/main.js?v=10"></script>
 </body>
 </html>

@@ -81,6 +81,10 @@
           if (data && data.ok) {
             show('ok', OK_TEXT);
             form.reset();
+            // Statistik: abgeschickte Anfrage zählen (ohne Inhalte)
+            if (typeof window.plausible === 'function') {
+              window.plausible('Anfrage', { props: { seite: location.pathname } });
+            }
           } else {
             show('err', FEHLER_TEXT);
           }

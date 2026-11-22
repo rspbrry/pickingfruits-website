@@ -33,7 +33,10 @@
 
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/styles.css?v=20">
+<link rel="stylesheet" href="/css/styles.css?v=21">
+<!-- Plausible: cookielose Statistik, EU-Server, keine personenbezogenen Daten -->
+<script defer data-domain="pickingfruits.de" src="https://plausible.io/js/script.outbound-links.js"></script>
+
 </head>
 <body class="lp">
 <a class="skip-link" href="#anfrage">Zum Formular springen</a>
@@ -114,6 +117,19 @@
             <option value="2.000 bis 5.000 €">2.000 bis 5.000 €</option>
             <option value="5.000 bis 10.000 €">5.000 bis 10.000 €</option>
             <option value="über 10.000 €">über 10.000 €</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="h-herkunft">Wie hast du von mir erfahren? <span class="opt">(optional)</span></label>
+          <select id="h-herkunft" name="herkunft">
+            <option value="" selected>Bitte wählen</option>
+            <option value="Empfehlung">Empfehlung</option>
+            <option value="Google-Suche">Google-Suche</option>
+            <option value="KI-Assistent (ChatGPT, Perplexity, Gemini …)">KI-Assistent (ChatGPT, Perplexity, Gemini …)</option>
+            <option value="Instagram oder LinkedIn">Instagram oder LinkedIn</option>
+            <option value="Kleinanzeigen">Kleinanzeigen</option>
+            <option value="Werbeanzeige">Werbeanzeige</option>
+            <option value="Sonstiges">Sonstiges</option>
           </select>
         </div>
         <div class="hp" aria-hidden="true">
@@ -422,6 +438,19 @@
             <option value="über 10.000 €">über 10.000 €</option>
           </select>
         </div>
+        <div class="field">
+          <label for="k-herkunft">Wie hast du von mir erfahren? <span class="opt">(optional)</span></label>
+          <select id="k-herkunft" name="herkunft">
+            <option value="" selected>Bitte wählen</option>
+            <option value="Empfehlung">Empfehlung</option>
+            <option value="Google-Suche">Google-Suche</option>
+            <option value="KI-Assistent (ChatGPT, Perplexity, Gemini …)">KI-Assistent (ChatGPT, Perplexity, Gemini …)</option>
+            <option value="Instagram oder LinkedIn">Instagram oder LinkedIn</option>
+            <option value="Kleinanzeigen">Kleinanzeigen</option>
+            <option value="Werbeanzeige">Werbeanzeige</option>
+            <option value="Sonstiges">Sonstiges</option>
+          </select>
+        </div>
         <div class="hp" aria-hidden="true">
           <label for="k-company">Firma (bitte leer lassen)</label>
           <input type="text" id="k-company" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -454,6 +483,6 @@
   <a href="https://wa.me/4915560915607?text=Hallo%20Daniel%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%2060-Tage-Versprechen." class="btn ghost" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 
-<script src="/js/main.js?v=9"></script>
+<script src="/js/main.js?v=10"></script>
 </body>
 </html>
